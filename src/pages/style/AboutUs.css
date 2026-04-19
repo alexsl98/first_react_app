@@ -1,0 +1,163 @@
+/* src/pages/AboutUs.css */
+.about-us-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f5 100%);
+}
+
+.about-us-content {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+  padding: 48px;
+}
+
+.about-us-text {
+  text-align: left;
+}
+
+.about-us-badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.about-us-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #1e293b;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-us-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.about-us-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.about-us-visual {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.visual-card {
+  background: #f8fafc;
+  padding: 32px 24px;
+  border-radius: 24px;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.visual-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.15);
+}
+
+.visual-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.visual-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.visual-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .about-us-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 32px;
+  }
+
+  .about-us-title {
+    font-size: 2.2rem;
+  }
+
+  .about-us-stats {
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-content {
+    padding: 24px;
+  }
+
+  .about-us-title {
+    font-size: 1.8rem;
+  }
+
+  .about-us-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .stat-item {
+    align-items: center;
+  }
+}
