@@ -1,0 +1,123 @@
+/* Botón que abre el drawer */
+.drawer-boton-abrir {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.drawer-boton-abrir:hover {
+  background-color: #0056b3;
+}
+
+/* El drawer (menú lateral) */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #2c3e50;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  color: white;
+  animation: slideIn 0.3s ease;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Botón cerrar */
+.drawer-boton-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.drawer-boton-cerrar:hover {
+  background-color: #c0392b;
+}
+
+/* Título del drawer */
+.drawer-titulo {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+}
+
+/* Items del menú - funciona para div y Link */
+.drawer-menu-item {
+  display: block;
+  padding: 12px 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;  /* ← Quita el subrayado de los links */
+}
+
+.drawer-menu-item:hover {
+  background-color: #3498db;
+  transform: translateX(5px);
+}
+
+/* Fondo oscuro detrás del drawer */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Versión responsiva para móviles */
+@media (max-width: 458px) {
+  .drawer {
+    width: 80%;
+  }
+  
+  .drawer-menu-item {
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+}
