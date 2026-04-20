@@ -32,6 +32,10 @@ function Home() {
         />
       </div>
 
+      <div className="bg-blue-500 text-white p-4 rounded-lg">
+        ¡Tailwind está funcionando!
+      </div>
+
       {/* Tarjeta de Instagram */}
       <div
         style={{
